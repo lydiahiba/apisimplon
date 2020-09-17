@@ -11,7 +11,7 @@ before_install:
   - wget -qO- https://toolbelt.heroku.com/install.sh | sh
 
 script:
-  - HEROKU_API_KEY=$HEROKU_PASSWORD heroku container:login
-  - HEROKU_API_KEY=$HEROKU_PASSWORD heroku container:push web --app $HEROKU_APP_NAME
-  - HEROKU_API_KEY=$HEROKU_PASSWORD heroku container:release web --app $HEROKU_APP_NAME
+  - HEROKU_API_KEY=$HEROKU_TOKEN heroku container:login
+  - HEROKU_API_KEY=$HEROKU_TOKEN heroku container:push web --app $HEROKU_APP_NAME
+  - HEROKU_API_KEY=$HEROKU_TOKEN heroku container:release web --app $HEROKU_APP_NAME
     
