@@ -4,7 +4,7 @@ from flask_restful import Resource, Api, reqparse
 
 app = Flask(__name__)
 api = Api(app)
-port = int(os.environ.get("PORT"), 5000)
+port = int(os.environ.get("PORT",5000))
 
 parser = reqparse.RequestParser()
 parser.add_argument('number', type=float, required=True)
